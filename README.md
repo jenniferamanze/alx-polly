@@ -1,9 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PollApp - Next.js Polling Application
 
-## Getting Started
+A modern, full-featured polling application built with Next.js 15, TypeScript, and Shadcn UI components. Create, share, and participate in polls with your community.
 
-First, run the development server:
+## 🚀 Features
 
+- **User Authentication** - Login, register, and profile management
+- **Poll Creation** - Create polls with multiple options and categories
+- **Poll Viewing** - Browse and participate in community polls
+- **Real-time Results** - See poll results update instantly
+- **Responsive Design** - Beautiful UI that works on all devices
+- **Type Safety** - Built with TypeScript for better development experience
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: Shadcn UI
+- **Validation**: Zod
+- **Icons**: Lucide React (via Shadcn)
+
+## 📁 Project Structure
+
+```
+app/
+├── (auth)/                 # Authentication pages (route groups)
+│   ├── login/             # Login page
+│   ├── register/          # Registration page
+│   └── profile/           # User profile page
+├── polls/                 # Poll-related pages
+│   ├── [id]/             # Individual poll page (dynamic route)
+│   ├── create/           # Create new poll page
+│   └── page.tsx          # Polls listing page
+├── components/            # Reusable components
+│   ├── auth/             # Authentication components
+│   ├── polls/            # Poll-related components
+│   ├── ui/               # Shadcn UI components
+│   ├── navigation.tsx    # Main navigation
+│   └── footer.tsx        # Footer component
+├── lib/                  # Utility functions and configurations
+│   ├── api/              # API functions
+│   ├── auth/             # Authentication utilities
+│   ├── types/            # TypeScript type definitions
+│   ├── validations/      # Form validation schemas
+│   └── utils.ts          # General utilities
+├── globals.css           # Global styles
+├── layout.tsx            # Root layout
+└── page.tsx              # Home page
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd alx-polly
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
@@ -14,23 +84,65 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📋 Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-## Learn More
+## 🎨 UI Components
 
-To learn more about Next.js, take a look at the following resources:
+This project uses [Shadcn UI](https://ui.shadcn.com/) components. To add new components:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npx shadcn@latest add [component-name]
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔧 Development
 
-## Deploy on Vercel
+### Adding New Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Authentication**: Components are in `app/components/auth/`
+2. **Polls**: Components are in `app/components/polls/`
+3. **Types**: Define types in `app/lib/types/`
+4. **Validation**: Add schemas in `app/lib/validations/`
+5. **API**: Add API functions in `app/lib/api/`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Code Structure
+
+- **Pages**: Use the App Router structure in `app/`
+- **Components**: Reusable components in `app/components/`
+- **Utilities**: Helper functions in `app/lib/`
+- **Styling**: Tailwind CSS classes with Shadcn components
+
+## 🚧 TODO
+
+- [ ] Implement authentication backend
+- [ ] Add database integration
+- [ ] Implement poll creation API
+- [ ] Add real-time voting updates
+- [ ] Add user profile management
+- [ ] Add poll analytics
+- [ ] Add search and filtering
+- [ ] Add poll categories management
+- [ ] Add email notifications
+- [ ] Add poll sharing features
+
+## 📝 License
+
+This project is licensed under the MIT License.
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
+
+## 📞 Support
+
+For support, email support@pollapp.com or create an issue in the repository.
